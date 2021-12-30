@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "./images/logo.png";
 import "./App.css";
-import { textWords } from "./Components/text";
+import { textWords } from "./text";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -28,7 +28,6 @@ function App() {
       <img className="image" src={Logo} alt="logo" />
       <h1>Basic English Spell Checker</h1>
       <label htmlFor="Check spelling" className="top-input">
-        {" "}
         Check Your Spelling
       </label>
       <input
