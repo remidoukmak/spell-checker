@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import logo from './logo.svg';
+import Logo from "./images/logo.png";
 import "./App.css";
 import { textWords } from "./Components/text";
 
@@ -10,34 +10,23 @@ function App() {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    // console.log(
-    //   "text-update",
-    //   event.target.value,
-    //   "short",
-    //   event.target.value.indexOf(text)
-    // );
     if (textWords.indexOf(event.target.value) === -1) {
       setHighlight("red");
-      // alert("check your spelling");
     } else {
       setHighlight("");
     }
   };
-  const submit = (event) => {
-    //to store the output line 28 & 36 & 60 //
-    // localStorage.setItem("item", JSON.stringify(inputValue));
-    // if (text.indexOf(event.target.value) === text) {
-
-    // }
+  const submit = () => {
 
     setNewText(newText.concat(inputValue));
     setInputValue("");
   };
-  // const caught = localStorage.getItem("item");
-  // console.log(caught);
+
   return (
     <div className="App">
       <div className="header"></div>
+      <img className="image" src={Logo} alt="logo" />
+      <h1>Basic English Spell Checker</h1>
       <label htmlFor="Check spelling" className="top-input">
         {" "}
         Check Your Spelling
@@ -59,7 +48,6 @@ function App() {
           return <li key={index}>{item} </li>;
         })}
       </ul>
-      {/* <p>{caught}</p> */}
     </div>
   );
 }
