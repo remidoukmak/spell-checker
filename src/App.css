@@ -57,6 +57,18 @@ input {
 }
 
 .button-box {
-    padding: 20px;
+  padding: 20px;
+}
 
+.h1 {
+  padding: 2.5%;
+  font-size: 2px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.image {
+  margin-top: 1%;
+  max-width: 200px;
 }
